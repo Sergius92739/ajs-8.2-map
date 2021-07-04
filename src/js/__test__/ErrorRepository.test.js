@@ -15,6 +15,7 @@ test('Метод translate должен вернуть значение по к�
 
 test('Метод translate должен вернуть Unknown error, если ключа нет', () => {
   const Test = new ErrorRepository();
+  Test.errStorage.set(1000, 'test error');
   expect(Test.translate(2000)).toBe('Unknown error');
 });
 
